@@ -1,31 +1,106 @@
 .App {
   text-align: center;
+  
+  
+  background-color: oldlace;
 }
 
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer{
+  background-color: #D1C4E9;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+  font-family: monospace;
 }
+.detail{
+  font-family: monospace;
+}
+
+
+.text{
+  width: 500px;
+  text-align: center;
+ margin: 0 auto;
+ margin-top: 100px;
+  color: #000;
+  background-color: #ffffff60;
+  font-weight: bolder;
+  font-family: monospace;
+  border-radius: 10px;
+}
+
+.size
+{
+  font-size: 40px;
+}
+
+.text1{
+  width: 600px;
+  font-size: 30px;
+  margin: 0 auto;
+  color: #000;
+  background-color: #ffffff60;
+  font-weight: bolder;
+  font-family: monospace;
+  border-radius: 10px;
+}
+
+
+
+
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 12px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.Stream-button {
+  margin-bottom: 12px;
+}
+
+.Graph {
+  min-height: 50vh;
+  width: 700px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 700px;
+    height: 100%; /* New width for default modal */
+  }
+  .modal-sm {
+    width: 350px;
+    height: 100%; /* New width for small modal */
+  }
+}
+@media screen and (min-width: 992px) {
+  .modal-lg {
+    width: 100%;
+    height: 100%; /* New width for large modal */
+    text-align: center;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +110,104 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* overrides and helpers go here */
+.mvh-100 {
+  min-height: 100vh;
+}
+.mvh-90 {
+  min-height: 90vh;
+}
+
+.navbar-dark {
+  background-color: rgb(0, 0, 0);
+  font-family: monospace;
+}
+
+.jumbotron {
+  height: 500px;
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  background-image: url(https://www.federalbank.co.in/image/journal/article?img_id=10215787&t=1486537069042);
+  background-repeat: no-repeat;
+ 
+  background-size: cover;
+  color:#000;
+}
+
+@media only screen and (max-width: 600px) {
+  
+.jumbotron {
+  height: 210px;
+  
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  background-image: url(https://www.federalbank.co.in/image/journal/article?img_id=10215787&t=1486537069042);
+  background-repeat: no-repeat;
+ 
+  
+  color:#000;
+}
+
+}
+
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height:400px;
+}
+.address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+}
+
+.style
+{
+  background-image: url(https://i2.wp.com/inc42.com/wp-content/uploads/2019/09/challenge.jpg?fit=1360%2C1020&ssl=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .text{
+    width: 250px;
+    text-align: center;
+   margin: 0 auto;
+   
+    color: #000;
+    background-color: #ffffff60;
+    font-weight: bolder;
+    font-family: monospace;
+    border-radius: 10px;
+  }
+  .size
+{
+  font-size: 20px;
+}
+
+.text1{
+  width: 350px;
+  font-size: 15px;
+  margin: 0 auto;
+  color: #000;
+  background-color: #ffffff60;
+  font-weight: bolder;
+  font-family: monospace;
+  border-radius: 10px;
+}
+
+.speed{
+  width: 100px;
+}
 }
