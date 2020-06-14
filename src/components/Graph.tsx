@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Table } from '@finos/perspective';
-import { ServerRespond } from './DataStreamer';
+import { animal } from './DataStreamer';
 import './Graph.css';
 
 /**
  * Props declaration for <Graph />
  */
 interface IProps {
-  data: ServerRespond[],
+  data: animal[],
 }
 
 /**

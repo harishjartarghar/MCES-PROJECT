@@ -3,12 +3,20 @@
  * The datafeed server returns an array of ServerRespond with 2 stocks.
  * We do not have to manipulate the ServerRespond for the purpose of this task.
  */
-export interface ServerRespond {
+export interface animal {
   heart_rate: Number,
   body_temperature:Number,
   rumination:Number,
-  timestamp: Date,
+  
 }
+
+interface ServerRespond {
+  heart_rate: Number,
+  temperature:Number,
+  rumination:Number,
+  
+}
+
 
 class DataStreamer {
   // The url where datafeed server is listening

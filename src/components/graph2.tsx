@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Table } from '@finos/perspective';
-import { ServerRespond } from './DataStreamer';
+import { animal } from './DataStreamer';
 import './Graph.css';
 
 /**
  * Props declaration for <Graph />
  */
 interface IProps {
-  data: ServerRespond[],
+  data: animal[],
 }
 
 /**
@@ -74,9 +74,9 @@ class Graph2 extends Component<IProps, {}> {
       this.table.update(this.props.data.map((el: any) => {
         // Format the data from ServerRespond to the schema
         return {
-          heart_rate: rand1  || 0,
-          body_temperature:rand  || 0,
-          rumination:rand2  || 0
+          heart_rate: el.heart_rate  || 0,
+          body_temperature:el.body_temperature  || 0,
+          rumination:el.rumination  || 0
         };
       }));
     }

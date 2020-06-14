@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import DataStreamer, { ServerRespond } from './DataStreamer';
+import DataStreamer, { animal } from './DataStreamer';
 import Graph from './Graph';
 import '../../src/App.css';
 import Modall  from './MODAL';
 import {  Modal, ModalHeader, ModalBody } from 'reactstrap';
 import CustomSegmentLabels from './speed'
-
+import firebase from '../firebase';
 /**
  * State declaration for <App />
  */
 interface IState {
-  data: ServerRespond[],
+  data: animal[],
   showGraph: boolean,
   isModalOpen:boolean
   animalname?:string
@@ -61,14 +61,19 @@ class AnimalComponent1 extends Component<{},IState>{
     let x=0;
     const interval=setInterval(()=>
     {
-      DataStreamer.getData((serverResponds: ServerRespond[]) => {
-        // Update the state by creating a new array of data that consists of
-        // Previous data in the state and the new data from server
-        this.setState({ 
-          data: serverResponds,
-          showGraph:true
-         });
-      });
+      const animal=firebase.database().ref('animal1');
+     animal.on('value',(snapshot)=>{
+       var info=[{
+         "heart_rate":snapshot.child('heart_rate').val(),
+         "body_temperature":snapshot.child('temperature').val(),
+         "rumination":snapshot.child('rumination').val()
+       }]
+      this.setState({ 
+        data: info,
+        showGraph:true
+       });
+       
+     })
     x++;
     if(x>1000)
     {
