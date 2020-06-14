@@ -58,15 +58,7 @@ class Graph2 extends Component<IProps, {}> {
   }
 
   componentDidUpdate() {
-    var min = 105;
-    var max = 108;
-    var rand =  min + (Math.random() * (max-min));
-    var min1 = 60;
-    var max1 = 65;
-    var rand1 =  min1 + (Math.random() * (max1-min1));
-    var min2 = 300;
-    var max2 = 350;
-    var rand2 =  min2 + (Math.random() * (max2-min2));
+  
     // Everytime the data props is updated, insert the data into Perspective table
     if (this.table) {
       // As part of the task, you need to fix the way we update the data props to

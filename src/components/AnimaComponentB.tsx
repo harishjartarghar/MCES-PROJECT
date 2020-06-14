@@ -119,6 +119,7 @@ class AnimalComponent2 extends Component<{},IState>{
          <CustomSegmentLabels/>
          <h5>Health: All Good</h5>
          <h5>Disease: No Disease</h5>
+         <h5>Range: Inside</h5>
           </ModalBody>
           </Modal>
           
